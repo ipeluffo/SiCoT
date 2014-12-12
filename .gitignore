@@ -27,6 +27,9 @@ node_modules
 # Users Environment Variables
 .lock-wscript
 
+### Bower files ###
+bower_components
+
 ### OSX files ###
 .DS_Store
 .AppleDouble
