@@ -11,7 +11,15 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.set('view engine', 'hbs');
+
+var exphbs = require('express-handlebars');
+
+var hbsInstance = exphbs.create({
+    defaultLayout   : 'default',
+    extname : 'hbs'
+});
+app.engine('hbs', hbsInstance.engine);
 
 // uncomment after placing your favicon in /public
 // app.use(favicon(__dirname + '/public/favicon.ico'));
@@ -42,7 +50,8 @@ if (app.get('env') === 'development') {
         res.status(err.status || 500);
         res.render('error', {
             message: err.message,
-            error: err
+            error: err,
+            layout : false
         });
     });
 }
@@ -53,7 +62,8 @@ app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error', {
         message: err.message,
-        error: {}
+        error: {},
+        layout : false
     });
 });
 
