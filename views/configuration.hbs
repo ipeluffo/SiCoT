@@ -4,55 +4,56 @@
         <div class="col-md-3"></div>
 
         <div class="col-md-6">
-            <form>
+            <div id="divMessages"></div>
+            <form id="configurationForm">
                 <h3>MongoDB</h3>
                 <div class="form-group">
                     <label for="mongoDbAddress">MongoDB Address</label>
-                    <input type="text" class="form-control" id="mongoDbAddress" placeholder="IP Address">
+                    <input type="text" class="form-control" id="mongoDbAddress" name="mongoDbAddress" placeholder="IP Address" value="{{mongoDbAddress}}">
                 </div>
 
                 <div class="form-group">
                     <label for="mongoDbPort">MongoDB Port</label>
-                    <input type="number" class="form-control" id="mongoDbPort" placeholder="Port Number">
+                    <input type="number" class="form-control" id="mongoDbPort" name="mongoDbPort" placeholder="Port Number" value="{{mongoDbPort}}">
                 </div>
 
                 <div class="form-group">
                     <label for="mongoDbUser">MongoDB User</label>
-                    <input type="text" class="form-control" id="mongoDbUser" placeholder="User">
+                    <input type="text" class="form-control" id="mongoDbUser" name="mongoDbUser" placeholder="User" value="{{mongoDbUser}}">
                 </div>
 
                 <div class="form-group">
                     <label for="mongoDbPassword">MongoDB Password</label>
-                    <input type="password" class="form-control" id="mongoDbPassword" placeholder="Password">
+                    <input type="password" class="form-control" id="mongoDbPassword" name="mongoDbPassword" placeholder="Password" value="{{mongoDbPassword}}">
                 </div>
 
                 <div class="form-group">
                     <label for="mongoDbDatabase">MongoDB Database Name</label>
-                    <input type="text" class="form-control" id="mongoDbDatabase" placeholder="Database">
+                    <input type="text" class="form-control" id="mongoDbDatabase" name="mongoDbDatabase" placeholder="Database" value="{{mongoDbDatabase}}">
                 </div>
                 
                 <h3>Twitter Credentials</h3>
                 <div class="form-group">
                     <label for="twitterConsumerKey">Consumer Key</label>
-                    <input type="text" class="form-control" id="twitterConsumerKey">
+                    <input type="text" class="form-control" id="twitterConsumerKey" name="twitterConsumerKey" value="{{twitterConsumerKey}}">
                 </div>
 
                 <div class="form-group">
                     <label for="twitterConsumerSecret">Consumer Secret</label>
-                    <input type="text" class="form-control" id="twitterConsumerSecret">
+                    <input type="text" class="form-control" id="twitterConsumerSecret" name="twitterConsumerSecret" value="{{twitterConsumerSecret}}">
                 </div>
 
                 <div class="form-group">
                     <label for="twitterTokenKey">Token Key</label>
-                    <input type="text" class="form-control" id="twitterTokenKey">
+                    <input type="text" class="form-control" id="twitterTokenKey" name="twitterTokenKey" value="{{twitterTokenKey}}">
                 </div>
 
                 <div class="form-group">
                     <label for="twitterTokenSecret">Token Secret</label>
-                    <input type="password" class="form-control" id="twitterTokenSecret">
+                    <input type="text" class="form-control" id="twitterTokenSecret" name="twitterTokenSecret" value="{{twitterTokenSecret}}">
                 </div>
             
-                <button type="submit" class="btn btn-default">Submit</button>
+                <button type="button" class="btn btn-default" id="configurationFormSubmitButton">Submit</button>
             </form>
         </div>
 
@@ -61,3 +62,5 @@
 	</div>
 
 </div>
+
+<script type="text/javascript" src="js/configurationClient.js"></script>

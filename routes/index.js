@@ -1,5 +1,10 @@
+/*jslint node:true */
+'use strict';
+
 var express = require('express');
 var router = express.Router();
+
+var localStorageService = require('../services/localStorageService');
 
 /* GET home page. */
 router.get('/', function(req, res) {
@@ -12,7 +17,9 @@ router.get('/publicStream', function (req, res) {
 });
 
 router.get('/configuration', function (req, res) {
-	res.render('configuration', { title: 'Configuration'});
+	var conf = localStorageService.getConfiguration() || {};
+	conf.title = 'Configuration';
+	res.render('configuration', conf);
 });
 
 module.exports = router;
