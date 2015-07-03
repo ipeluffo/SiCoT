@@ -31,10 +31,17 @@ node_modules
 # Users Environment Variables
 .lock-wscript
 
+######################################
+
+### IDEs files ###
+.idea
+
+######################################
 
 ### Bower files ###
 bower_components
 
+######################################
 
 ### OSX files ###
 .DS_Store
